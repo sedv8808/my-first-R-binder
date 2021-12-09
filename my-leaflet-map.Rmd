@@ -1,0 +1,28 @@
+---
+title: "my-leaflet-map"
+author: "Socorro Dominguez"
+date: "08/12/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+leaflet(options = leafletOptions(minZoom = 0, maxZoom = 18))
+```
+
+## My Leaflet Map
+
+**TASK:** Find UBC in a Leaflet map.
+
+```{r}
+map1 <- leaflet() %>%
+              addProviderTiles(providers$Stamen.TerrainBackground) %>%
+              addTiles() %>%
+              addCircleMarkers(lng =-123.241999032 , lat = 49.267665596,
+              popup = paste0("UBC"),
+              clusterOptions = markerClusterOptions(),
+              options = markerOptions(riseOnHover = TRUE))
+
+map1
+```
