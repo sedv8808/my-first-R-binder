@@ -2,9 +2,5 @@ name: my-folium-map
 channels:
   - conda-forge
 dependencies:
-  - numpy
-  - matplotlib
   - pandas
-  - pip
-  - pip:
-    - folium pandas
+  - folium
