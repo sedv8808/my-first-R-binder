@@ -1,6 +1,3 @@
 install.packages('leaflet')
 install.packages('tidyverse')
 install.packages('devtools')
-install.packages("devtools")
-library('devtools')
-devtools::install_github('NeotomaDB/neotoma2', ref = "production")
